@@ -1,0 +1,31 @@
+# ── Groups ────────────────────────────────────────────────────────────────────
+
+dn: cn=engineers,ou=groups,dc=iam-lab,dc=local
+objectClass: groupOfNames
+cn: engineers
+description: Software and Security Engineers
+member: uid=alice,ou=users,dc=iam-lab,dc=local
+member: uid=carol,ou=users,dc=iam-lab,dc=local
+
+dn: cn=operations,ou=groups,dc=iam-lab,dc=local
+objectClass: groupOfNames
+cn: operations
+description: Operations and SRE team
+member: uid=bob,ou=users,dc=iam-lab,dc=local
+member: uid=eve,ou=users,dc=iam-lab,dc=local
+
+dn: cn=managers,ou=groups,dc=iam-lab,dc=local
+objectClass: groupOfNames
+cn: managers
+description: Engineering managers
+member: uid=dave,ou=users,dc=iam-lab,dc=local
+
+dn: cn=all-staff,ou=groups,dc=iam-lab,dc=local
+objectClass: groupOfNames
+cn: all-staff
+description: All company staff
+member: uid=alice,ou=users,dc=iam-lab,dc=local
+member: uid=bob,ou=users,dc=iam-lab,dc=local
+member: uid=carol,ou=users,dc=iam-lab,dc=local
+member: uid=dave,ou=users,dc=iam-lab,dc=local
+member: uid=eve,ou=users,dc=iam-lab,dc=local

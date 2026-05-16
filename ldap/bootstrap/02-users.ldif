@@ -1,0 +1,98 @@
+# ── Sample Users ─────────────────────────────────────────────────────────────
+# Passwords are pre-hashed with SSHA. Plain-text equivalents:
+#   alice   → Alice123!
+#   bob     → Bob123!
+#   carol   → Carol123!
+#   dave    → Dave123!
+#   eve     → Eve123!
+# Generate a new hash: slappasswd -s 'YourPassword'
+
+dn: uid=alice,ou=users,dc=iam-lab,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: alice
+cn: Alice Anderson
+sn: Anderson
+givenName: Alice
+mail: alice@iam-lab.local
+userPassword: {SSHA}1dVXNnSDvMjF7rlBuDTiTy4bvYjMQiSu
+uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/alice
+loginShell: /bin/bash
+departmentNumber: engineering
+title: Software Engineer
+telephoneNumber: +1-555-0101
+
+dn: uid=bob,ou=users,dc=iam-lab,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: bob
+cn: Bob Baker
+sn: Baker
+givenName: Bob
+mail: bob@iam-lab.local
+userPassword: {SSHA}kGcDLOT8sB3R2VmB7GjFN8RVqpB+qziy
+uidNumber: 1002
+gidNumber: 1002
+homeDirectory: /home/bob
+loginShell: /bin/bash
+departmentNumber: operations
+title: DevOps Engineer
+telephoneNumber: +1-555-0102
+
+dn: uid=carol,ou=users,dc=iam-lab,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: carol
+cn: Carol Carter
+sn: Carter
+givenName: Carol
+mail: carol@iam-lab.local
+userPassword: {SSHA}v8nWy9QpA3k1HXtCo2eR7ZmLwJbSdUfN
+uidNumber: 1003
+gidNumber: 1001
+homeDirectory: /home/carol
+loginShell: /bin/bash
+departmentNumber: engineering
+title: Security Engineer
+telephoneNumber: +1-555-0103
+
+dn: uid=dave,ou=users,dc=iam-lab,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: dave
+cn: Dave Davis
+sn: Davis
+givenName: Dave
+mail: dave@iam-lab.local
+userPassword: {SSHA}mP4xQ8sL2jH5TnKv9WrCbZ6YaEdFgIoU
+uidNumber: 1004
+gidNumber: 1003
+homeDirectory: /home/dave
+loginShell: /bin/bash
+departmentNumber: management
+title: Engineering Manager
+telephoneNumber: +1-555-0104
+
+dn: uid=eve,ou=users,dc=iam-lab,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: eve
+cn: Eve Evans
+sn: Evans
+givenName: Eve
+mail: eve@iam-lab.local
+userPassword: {SSHA}nQ5yR9tM3kI6UoLw0XsDcA7ZbFhGjJpV
+uidNumber: 1005
+gidNumber: 1002
+homeDirectory: /home/eve
+loginShell: /bin/bash
+departmentNumber: operations
+title: SRE
+telephoneNumber: +1-555-0105
