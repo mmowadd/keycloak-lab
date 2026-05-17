@@ -80,6 +80,29 @@ services:
       retries: 20
       start_period: 60s
 
+  # ──────────────────────────────────────────────
+  # SimpleSAMLphp — SAML 2.0 Service Provider
+  # ──────────────────────────────────────────────
+  simplesamlphp:
+    build:
+      context: ./simplesamlphp
+      dockerfile: Dockerfile
+    container_name: keycloak-lab-simplesamlphp
+    environment:
+      SSP_ADMIN_PASSWORD: "${SSP_ADMIN_PASSWORD}"
+      SSP_SECRET_SALT: "${SSP_SECRET_SALT}"
+      # Full external URL so SSP generates correct entity IDs and ACS URLs
+      # (host port 8082 → container port 80 via Docker port mapping).
+      SSP_BASEURLPATH: "http://localhost:${SSP_PORT}/simplesaml/"
+    ports:
+      - "${SSP_PORT}:80"
+    volumes:
+      - ./simplesamlphp/config.php:/opt/simplesamlphp/config/config.php:ro
+      - ./simplesamlphp/config/authsources.php:/opt/simplesamlphp/config/authsources.php:ro
+      - ./simplesamlphp/metadata/saml20-idp-remote.php:/opt/simplesamlphp/metadata/saml20-idp-remote.php:ro
+    networks:
+      - iam-net
+
 volumes:
   ldap-data:
   ldap-config:

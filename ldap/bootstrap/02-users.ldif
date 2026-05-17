@@ -1,10 +1,10 @@
 # ── Sample Users ─────────────────────────────────────────────────────────────
 # Passwords are pre-hashed with SSHA. Plain-text equivalents:
-#   alice   → Alice123!
-#   bob     → Bob123!
-#   carol   → Carol123!
-#   dave    → Dave123!
-#   eve     → Eve123!
+#   alice   → alicePass1!
+#   bob     → bobPass1!
+#   carol   → carolPass1!
+#   dave    → davePass1!
+#   eve     → evePass1!
 # Generate a new hash: slappasswd -s 'YourPassword'
 
 dn: uid=alice,ou=users,dc=iam-lab,dc=local
@@ -16,7 +16,7 @@ cn: Alice Anderson
 sn: Anderson
 givenName: Alice
 mail: alice@iam-lab.local
-userPassword: {SSHA}1dVXNnSDvMjF7rlBuDTiTy4bvYjMQiSu
+userPassword: {SSHA}4Vn4U5OLuEDVIPSu6noMPlfv1wubJWDC
 uidNumber: 1001
 gidNumber: 1001
 homeDirectory: /home/alice
@@ -34,7 +34,7 @@ cn: Bob Baker
 sn: Baker
 givenName: Bob
 mail: bob@iam-lab.local
-userPassword: {SSHA}kGcDLOT8sB3R2VmB7GjFN8RVqpB+qziy
+userPassword: {SSHA}sLMdPlEhRPmXz963WICEF3Yyr1q75k8u
 uidNumber: 1002
 gidNumber: 1002
 homeDirectory: /home/bob
@@ -52,7 +52,7 @@ cn: Carol Carter
 sn: Carter
 givenName: Carol
 mail: carol@iam-lab.local
-userPassword: {SSHA}v8nWy9QpA3k1HXtCo2eR7ZmLwJbSdUfN
+userPassword: {SSHA}BoLJv/MLQhgIVxbPV9HLjSilhHrxaW90
 uidNumber: 1003
 gidNumber: 1001
 homeDirectory: /home/carol
@@ -70,7 +70,7 @@ cn: Dave Davis
 sn: Davis
 givenName: Dave
 mail: dave@iam-lab.local
-userPassword: {SSHA}mP4xQ8sL2jH5TnKv9WrCbZ6YaEdFgIoU
+userPassword: {SSHA}ND6gGZx5a2PFQX9Lq5tS+niPgsREor5F
 uidNumber: 1004
 gidNumber: 1003
 homeDirectory: /home/dave
@@ -88,7 +88,7 @@ cn: Eve Evans
 sn: Evans
 givenName: Eve
 mail: eve@iam-lab.local
-userPassword: {SSHA}nQ5yR9tM3kI6UoLw0XsDcA7ZbFhGjJpV
+userPassword: {SSHA}+HQJ+J5j0sPMKZ7i/JRR3fKcwXCC/FPA
 uidNumber: 1005
 gidNumber: 1002
 homeDirectory: /home/eve
